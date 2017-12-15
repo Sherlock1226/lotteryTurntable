@@ -374,22 +374,22 @@ venues = {
 		},
 	}
 
-	// window.onload = function() {
-	// 	wheel.init();
+	window.onload = function() {
+		wheel.init();
 
-	// 	var segments = new Array();
-	// 	$.each($('#venues input:checked'), function(key, cbox) {
-	// 		segments.push( cbox.value );
-	// 	});
+		var segments = new Array();
+		$.each($('#venues input:checked'), function(key, cbox) {
+			segments.push( cbox.value );
+		});
 
-	// 	wheel.segments = segments;
-	// 	wheel.update();
+		wheel.segments = segments;
+		wheel.update();
 
-	// 	// Hide the address bar (for mobile devices)!
-	// 	setTimeout(function() {
-	// 		window.scrollTo(0, 1);
-	// 	}, 0);
-	// }
+		// Hide the address bar (for mobile devices)!
+		setTimeout(function() {
+			window.scrollTo(0, 1);
+		}, 0);
+	}
 </script>
 </head>
 <body>
