@@ -37,62 +37,62 @@ venues = {
 		"66271"   : "折抵人民幣一元",
 		"5518"    : "折抵人民幣一元",
 		"392360"  : "折抵人民幣一元",
-		"2210952" : "折抵人民幣一元",
+		"2210952" : "折抵人民幣二元",
 		"207306"  : "折抵人民幣一元",
 		"41457"   : "折抵人民幣一元",
 		"101161"  : "折抵人民幣一元",
 		"257424"  : "折抵人民幣一元",
 		"512060"  : "折抵人民幣一元",
-		"66244"   : "折抵人民幣一元",
+		"66244"   : "折抵人民幣二元",
 		"352867"  : "折抵人民幣一元",
 		"22493"   : "折抵人民幣一元",
 		"268052"  : "折抵人民幣一元",
 		"5665"    : "折抵人民幣一元",
-		"129724"  : "折抵人民幣一元",
+		"129724"  : "折抵人民幣二元",
 		"42599"   : "折抵人民幣一元"
 	};
 
-	$(function() {
+	// $(function() {
 
-		var venueContainer = $('#venues ul');
-		$.each(venues, function(key, item) {
-			venueContainer.append(
-		        $(document.createElement("li"))
-		        .append(
-	                $(document.createElement("input")).attr({
-                         id:    'venue-' + key
-                        ,name:  item
-                        ,value: item
-                        ,type:  'checkbox'
-                        ,checked:true
-	                })
-	                .change( function() {
-	                	var cbox = $(this)[0];
-	                	var segments = wheel.segments;
-	                	var i = segments.indexOf(cbox.value);
+	// 	var venueContainer = $('#venues ul');
+	// 	$.each(venues, function(key, item) {
+	// 		venueContainer.append(
+	// 	        $(document.createElement("li"))
+	// 	        .append(
+	//                 $(document.createElement("input")).attr({
+        //                  id:    'venue-' + key
+        //                 ,name:  item
+        //                 ,value: item
+        //                 ,type:  'checkbox'
+        //                 ,checked:true
+	//                 })
+	//                 .change( function() {
+	//                 	var cbox = $(this)[0];
+	//                 	var segments = wheel.segments;
+	//                 	var i = segments.indexOf(cbox.value);
 
-	                	if (cbox.checked && i == -1) {
-	                		segments.push(cbox.value);
+	//                 	if (cbox.checked && i == -1) {
+	//                 		segments.push(cbox.value);
 
-	                	} else if ( !cbox.checked && i != -1 ) {
-	                		segments.splice(i, 1);
-	                	}
+	//                 	} else if ( !cbox.checked && i != -1 ) {
+	//                 		segments.splice(i, 1);
+	//                 	}
 
-	                	segments.sort();
-	                	wheel.update();
-	                } )
+	//                 	segments.sort();
+	//                 	wheel.update();
+	//                 } )
 
-		        ).append(
-	                $(document.createElement('label')).attr({
-	                    'for':  'venue-' + key
-	                })
-	                .text( item )
-		        )
-		    )
-		});
+	// 	        ).append(
+	//                 $(document.createElement('label')).attr({
+	//                     'for':  'venue-' + key
+	//                 })
+	//                 .text( item )
+	// 	        )
+	// 	    )
+	// 	});
 
-		$('#venues ul>li').tsort("input", {attr: "value"});
-	});
+	// 	$('#venues ul>li').tsort("input", {attr: "value"});
+	// });
 </script>
 <script type=text/javascript>
 // WHEEL!
