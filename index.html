@@ -17,16 +17,17 @@
 
     new Sudoku({
         sudokuSize: canvas.width,
+        duration:2000,
 
         awards: [
-	{type: 'image', content: 'http://bpic.588ku.com/element_pic/17/08/16/f076df96239c1e35536e0896840fb851.jpg'},
-	{type: 'image', content: 'http://bpic.588ku.com/element_pic/17/08/16/f076df96239c1e35536e0896840fb851.jpg'},
+	{type: 'image', content: './src/dist/box.png'},
+	{type: 'image', content: './src/dist/box.png'},
 	{type: 'losing', content: '未中奖'},
-	{type: 'image', content: 'http://bpic.588ku.com/element_pic/17/08/16/f076df96239c1e35536e0896840fb851.jpg'},
-	{type: 'image', content: 'http://bpic.588ku.com/element_pic/17/08/16/f076df96239c1e35536e0896840fb851.jpg'},
+	{type: 'image', content: './src/dist/box.png'},
+	{type: 'image', content: './src/dist/box.png'},
 	{type: 'losing', content: '未中奖'},
-	{type: 'image', content: 'http://bpic.588ku.com/element_pic/17/08/16/f076df96239c1e35536e0896840fb851.jpg'},
-	{type: 'image', content: 'http://bpic.588ku.com/element_pic/17/08/16/f076df96239c1e35536e0896840fb851.jpg'},
+	{type: 'image', content: './src/dist/box.png'},
+	{type: 'image', content: './src/dist/box.png'},
         ],
         
         finish: function (index) {
@@ -36,11 +37,11 @@
                     break;
                 case 'image':
                     if (index === 0)      alert('🎉折抵人民幣一元');
-		    else if (index === 1) alert('🎉折抵人民幣二元');
+		    else if (index === 1) alert('🎉折抵人民幣一元');
 		    else if (index === 3) alert('🎉折抵人民幣一元');
 		    else if (index === 4) alert('🎉折抵人民幣二元');
 		    else if (index === 6) alert('🎉折抵人民幣一元');
-		    else if (index === 7) alert('🎉折抵人民幣二元');
+		    else if (index === 7) alert('🎉折抵人民幣一元');
                     break;
                 case 'losing':
                     alert('💔很遗憾，您没有中奖~');
